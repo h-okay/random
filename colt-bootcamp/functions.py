@@ -67,3 +67,64 @@ def truncate(num, most):
 def two_list_dictionary(list1, list2):
     zipped = itertools.zip_longest(list1, list2)
     return {key: value for key, value in dict(zipped).items() if key is not None}
+
+
+def range_in_list(lst, start=0, end=None):
+    end = end if end else len(lst)
+    return sum(lst[start : end + 1])
+
+
+def same_frequency(num1, num2):
+    num1 = [str(num1).count(val) for val in str(num1)]
+    num2 = [str(num2).count(val) for val in str(num2)]
+
+    if num1 == num2:
+        return True
+    return False
+
+
+def nth(lst, ind):
+    return lst[ind]
+
+
+def find_the_duplicate(arr):
+    arr.sort()
+    for ind, val in enumerate(arr):
+        if val in arr[ind + 1 :]:
+            return val
+    return None
+
+
+def sum_up_diagonals(arr):
+    pointer1, pointer2 = 0, len(arr) - 1
+    ind = 0
+    total = 0
+    for _ in range(len(arr)):
+        total += arr[ind][ind] + arr[pointer1][pointer2]
+        ind += 1
+        pointer1 += 1
+        pointer2 -= 1
+    return total
+
+
+def min_max_key_in_dictionary(dct):
+    return [min(list(dct.keys())), max(list(dct.keys()))]
+
+
+def find_greater_numbers(arr):
+    # [5, 4, 3, 2, 1]
+    count = 0
+    i = 0
+    j = 1
+    while i < len(arr):
+        while j < len(arr):
+            if arr[j] > arr[i]:
+                count += 1
+            j += 1
+        j = i + 1
+        i += 1
+    return count
+
+
+def multiple_letter_count(string):
+    return {letter: string.count(letter) for letter in string}
