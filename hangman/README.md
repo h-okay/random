@@ -1,8 +1,10 @@
 # Hangman
 
-Select the version you want to play from the terminal menu.
+Run `select.sh` for the menu. Select the version you want to play from the terminal menu.
 1. CLI
 2. GUI
+
+
 
 ### The word list is **SOWPODS**
 - **SOWPODS** is a word list commonly used in word puzzles and games (like Scrabble for example). It is the combination of the Scrabble Player’s Dictionary and the Chamber’s Dictionary. 

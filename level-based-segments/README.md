@@ -6,4 +6,4 @@
 docker compose up
 ```
 
-Check http://0.0.0.0:8501/
+Check http://localhost:8501/
