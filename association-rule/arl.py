@@ -4,9 +4,8 @@ import warnings
 from pathlib import Path
 
 import pandas as pd
-from mlxtend.frequent_patterns import apriori, association_rules
-
 from helpers import Outliers
+from mlxtend.frequent_patterns import apriori, association_rules
 
 warnings.filterwarnings("ignore")
 logging.basicConfig(level=logging.INFO)
@@ -17,9 +16,9 @@ class AssociationRuleLearner:
         self.logger = logging.getLogger(__name__)
 
     def get_data(self):
-        from kaggle.api.kaggle_api_extended import (  # pylint: disable=import-outside-toplevel, import-error, no-name-in-module
+        from kaggle.api.kaggle_api_extended import (
             KaggleApi,
-        )  
+        )  # pylint: disable=import-outside-toplevel, import-error, no-name-in-module
 
         api = KaggleApi()
         api.authenticate()
@@ -81,4 +80,6 @@ class AssociationRuleLearner:
         rules = self.rules(agg_df)
         self.format_output(rules, data)
         rules.to_csv("data/rules.csv", index=False)
-        self.logger.info("Rules saved to %s", os.path.join(Path(__file__).parent, 'data/rules.csv'))
+        self.logger.info(
+            "Rules saved to %s", os.path.join(Path(__file__).parent, "data/rules.csv")
+        )

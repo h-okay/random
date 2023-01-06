@@ -46,7 +46,7 @@ for k, v in age_cat.items():
     if age_int in v:
         age_cat = k
 
-new_user = "_".join([cnt_int, src_int, sx_int, age_cat]) # type: ignore
+new_user = "_".join([cnt_int, src_int, sx_int, age_cat])  # type: ignore
 user_df = df[df.customers_level_based == new_user][["PRICE", "SEGMENT"]]
 
 # Kullanıcı {segment} segmentidir ve {price} getirmesi beklenir.

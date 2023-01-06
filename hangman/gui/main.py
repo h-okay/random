@@ -5,9 +5,9 @@ from pathlib import Path
 
 import pygame
 
-#try:
+# try:
 #    os.environ["DISPLAY"]
-#except:
+# except:
 #    os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 # setup pygame
@@ -86,7 +86,9 @@ def get_buttons() -> list:
     starty = 500
     buttons_ = []
     for i in range(26):
-        button_path = os.path.join(Path(__file__).parent, "asset", "buttons", f"{i}.png")
+        button_path = os.path.join(
+            Path(__file__).parent, "asset", "buttons", f"{i}.png"
+        )
         x_vec = startx + GAP * 2 + ((RADIUS * 2 + GAP) * (i % 13))
         y_vec = starty + (i // 13) * (GAP + RADIUS * 2)
         button = pygame.image.load(button_path)

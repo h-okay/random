@@ -1,8 +1,7 @@
 import click
-from requests import Session
-
 from api import APICalls
 from cleaner import Cleaner
+from requests import Session
 
 
 def main(api_key, pages):
