@@ -1,22 +1,9 @@
-from functions import (
-    find_factors,
-    find_greater_numbers,
-    find_the_duplicate,
-    includes,
-    min_max_key_in_dictionary,
-    multiple_letter_count,
-    nth,
-    range_in_list,
-    remove_every_other,
-    repeat,
-    same_frequency,
-    sum_pairs,
-    sum_up_diagonals,
-    titleize,
-    truncate,
-    two_list_dictionary,
-    vowel_count,
-)
+from functions import (find_factors, find_greater_numbers, find_the_duplicate,
+                       includes, min_max_key_in_dictionary,
+                       multiple_letter_count, nth, range_in_list,
+                       remove_every_other, repeat, same_frequency, sum_pairs,
+                       sum_up_diagonals, titleize, truncate,
+                       two_list_dictionary, vowel_count)
 
 
 def test_remove_every_other():
