@@ -16,9 +16,8 @@ class AssociationRuleLearner:
         self.logger = logging.getLogger(__name__)
 
     def get_data(self):
-        from kaggle.api.kaggle_api_extended import (
-            KaggleApi,
-        )  # pylint: disable=import-outside-toplevel, import-error, no-name-in-module
+        from kaggle.api.kaggle_api_extended import \
+            KaggleApi  # pylint: disable=import-outside-toplevel, import-error, no-name-in-module
 
         api = KaggleApi()
         api.authenticate()
@@ -61,7 +60,7 @@ class AssociationRuleLearner:
         return association_rules(freq_sets, metric="support", min_threshold=0.01)
 
     def __get_name_from_id(self, df_, id_):
-        return df_.loc[df_.StockCode == id_].Description.values[0]
+        return str(df_.loc[df_.StockCode == id_].Description.values[0])
 
     def format_output(self, final_df_, df_):
         self.logger.info("Formatting output")
