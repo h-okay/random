@@ -14,3 +14,17 @@ enabled = true
 [[analyzers]]
 name = "docker"
 enabled = true
+
+  [analyzers.meta]
+  dockerfile_paths = [
+    "diamonds/app/Dockerfile",
+    "level-based-segments/app/Dockerfile"
+  ]
+
+[[transformers]]
+name = "black"
+enabled = true
+
+[[transformers]]
+name = "isort"
+enabled = true
