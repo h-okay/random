@@ -45,9 +45,8 @@ def includes(give, search, search_from=0):
             if val == search:
                 return True
 
-    if isinstance(give, str):
-        if search in give[search_from:]:
-            return True
+    if isinstance(give, str) and search in give[search_from:]:
+        return True
 
     return False
 
