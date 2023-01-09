@@ -1,5 +1,6 @@
 class User:
-    def ready(self):
+    @staticmethod
+    def ready():
         while True:
             again = input("Ready to play? (y/n) ")
             if again.isalpha() and again.lower() == "y":
@@ -8,14 +9,16 @@ class User:
                 return False
             print("Invalid input.")
 
-    def user_input(self):
+    @staticmethod
+    def user_input():
         while True:
             user_guess = input("Give me a letter: ")
             if user_guess.isalpha() and len(user_guess) == 1:
                 return user_guess.upper()
             print("Invalid input.")
 
-    def again(self):
+    @staticmethod
+    def again():
         while True:
             again = input("Do you want to play again? (y/n) ")
             if again.isalpha() and again.lower() == "y":

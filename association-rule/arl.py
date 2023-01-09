@@ -15,7 +15,8 @@ class AssociationRuleLearner:
     def __init__(self):
         self.logger = logging.getLogger(__name__)
 
-    def get_data(self):
+    @staticmethod
+    def get_data():
         from kaggle.api.kaggle_api_extended import (  # pylint: disable=import-outside-toplevel, import-error, no-name-in-module
             KaggleApi,
         )
@@ -60,7 +61,8 @@ class AssociationRuleLearner:
         )
         return association_rules(freq_sets, metric="support", min_threshold=0.01)
 
-    def __get_name_from_id(self, df_, id_):
+    @staticmethod
+    def __get_name_from_id(df_, id_):
         return str(df_.loc[df_.StockCode == id_].Description.values[0])
 
     def format_output(self, final_df_, df_):
