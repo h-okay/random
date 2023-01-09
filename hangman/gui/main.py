@@ -5,7 +5,6 @@ from pathlib import Path
 
 import pygame
 
-
 # setup pygame
 pygame.init()
 WIDTH, HEIGHT = 1280, 720

@@ -26,4 +26,4 @@ def run(key, pages):
 
 
 if __name__ == "__main__":
-    run() # pylint: disable=no-value-for-parameter
+    run()  # pylint: disable=no-value-for-parameter
