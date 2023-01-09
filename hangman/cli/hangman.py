@@ -8,8 +8,7 @@ def board(arr):
 
 
 # game logic
-USER = User()
-PLAY = USER.ready()
+PLAY = User.ready()
 while PLAY:
     # setup
     word = Words.random_word()
@@ -18,7 +17,7 @@ while PLAY:
     # play
     while ("__" in game) and (LIFE != 0):
         print(*game)
-        guess = USER.user_input()
+        guess = User.user_input()
 
         if guess in game:
             print(f"{guess} already revealed.")
@@ -35,10 +34,10 @@ while PLAY:
 
     if LIFE == 0:
         print("You are out of lives.")
-        PLAY = USER.again()
+        PLAY = User.again()
 
     if ("__" not in game) and (LIFE != 0):
         print("You guessed it!")
-        PLAY = USER.again()
+        PLAY = User.again()
 
 print("Thank you for playing.")
