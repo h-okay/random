@@ -5,10 +5,6 @@ from pathlib import Path
 
 import pygame
 
-# try:
-#    os.environ["DISPLAY"]
-# except:
-#    os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 # setup pygame
 pygame.init()

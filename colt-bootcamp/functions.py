@@ -112,7 +112,6 @@ def min_max_key_in_dictionary(dct):
 
 
 def find_greater_numbers(arr):
-    # [5, 4, 3, 2, 1]
     count = 0
     i = 0
     j = 1
