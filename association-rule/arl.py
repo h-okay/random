@@ -16,8 +16,9 @@ class AssociationRuleLearner:
         self.logger = logging.getLogger(__name__)
 
     def get_data(self):
-        from kaggle.api.kaggle_api_extended import \
-            KaggleApi  # pylint: disable=import-outside-toplevel, import-error, no-name-in-module
+        from kaggle.api.kaggle_api_extended import (  # pylint: disable=import-outside-toplevel, import-error, no-name-in-module
+            KaggleApi,
+        )
 
         api = KaggleApi()
         api.authenticate()

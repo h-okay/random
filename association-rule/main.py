@@ -19,8 +19,7 @@ import click
 def main(username, key):
     os.environ["KAGGLE_USERNAME"] = username
     os.environ["KAGGLE_KEY"] = key
-    from arl import \
-        AssociationRuleLearner  # pylint: disable=import-outside-toplevel
+    from arl import AssociationRuleLearner  # pylint: disable=import-outside-toplevel
 
     arl = AssociationRuleLearner()
     arl.run()
