@@ -1,26 +1,26 @@
-function setDiceImage(imgNumber) {
-  let dice = Math.floor(Math.random() * 6) + 1;
+function setDiceImage (imgNumber) {
+  const dice = Math.floor(Math.random() * 6) + 1
   document
     .querySelector(`img.img${imgNumber}`)
-    .setAttribute("src", `./images/dice${dice}.png`);
-  return dice;
+    .setAttribute('src', `./images/dice${dice}.png`)
+  return dice
 }
 
-function showWinner(dice1, dice2) {
-  let title;
+function showWinner (dice1, dice2) {
+  let title
   if (dice1 > dice2) {
-    title = "🚩 Player 1 Wins!";
+    title = '🚩 Player 1 Wins!'
   } else if (dice1 < dice2) {
-    title = "Player 2 Wins! 🚩";
+    title = 'Player 2 Wins! 🚩'
   } else {
-    title = "Draw!";
+    title = 'Draw!'
   }
-  document.querySelector("h1").innerHTML = title;
+  document.querySelector('h1').innerHTML = title
 }
-function main() {
-  const dice1 = setDiceImage(1);
-  const dice2 = setDiceImage(2);
-  showWinner(dice1, dice2);
+function main () {
+  const dice1 = setDiceImage(1)
+  const dice2 = setDiceImage(2)
+  showWinner(dice1, dice2)
 }
 
-main();
+main()
