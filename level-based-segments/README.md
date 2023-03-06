@@ -1,7 +1,9 @@
 ### What you need:
-* Docker
+
+- Docker
 
 ### How to run:
+
 ```
 docker compose up
 ```

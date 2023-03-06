@@ -2,7 +2,7 @@ version: "2.2"
 
 services:
   build-app:
-      build: app
-      restart: unless-stopped
-      ports:
-        - 8501:8501
+    build: app
+    restart: unless-stopped
+    ports:
+      - 8501:8501
