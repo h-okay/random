@@ -1,5 +1,5 @@
 function setDiceImage(imgNumber) {
-  var dice = Math.floor(Math.random() * 6) + 1;
+  let dice = Math.floor(Math.random() * 6) + 1;
   document
     .querySelector(`img.img${imgNumber}`)
     .setAttribute("src", `./images/dice${dice}.png`);
@@ -7,7 +7,7 @@ function setDiceImage(imgNumber) {
 }
 
 function showWinner(dice1, dice2) {
-  var title;
+  let title;
   if (dice1 > dice2) {
     title = "🚩 Player 1 Wins!";
   } else if (dice1 < dice2) {
