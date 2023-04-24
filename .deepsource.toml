@@ -6,6 +6,9 @@ name = "sql"
 [[analyzers]]
 name = "javascript"
 
+[analyzers.meta]
+environment = ["jquery"]
+
 [[analyzers]]
 name = "java"
 
