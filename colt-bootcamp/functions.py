@@ -34,7 +34,6 @@ def find_factors(num):
 
 
 def includes(give, search, search_from=0):
-
     if isinstance(give, list):
         for val in give[search_from:]:
             if val == search:
