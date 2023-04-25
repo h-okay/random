@@ -6,11 +6,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const appid = ""; // api key
 
-app.get("/", function (_, res) {
-    res.sendFile(__dirname + "/index.html");
+app.get("/", (_, res) => {
+    res.sendFile(`${__dirname}/index.html`);
 });
 
-app.post("/", function (req, res) {
+app.post("/", (req, res) => {
     const locationUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${req.body.city}&appid=${appid}`;
     https.get(locationUrl, function (response) {
         response.on("data", function (data) {
@@ -26,8 +26,8 @@ app.post("/", function (req, res) {
                     const img = weatherData.weather[0].icon;
                     const imgUrl = "https://openweathermap.org/img/wn/" + img + "@2x.png";
                     res.write('<head><meta charset="utf-8"></head>');
-                    res.write("<img src=" + imgUrl + ">");
-                    res.write(`<h1>${req.body.city} currently has ` + desc + " and the temperature is " + temp + "</h1>");
+                    res.write(`<img src=${imgUrl}>`);
+                    res.write(`<h1>${req.body.city} currently has ${desc} and the temperature is ${temp}</h1>`);
                     res.send();
                 })
             });
