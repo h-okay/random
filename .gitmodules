@@ -1,3 +1,4 @@
 [submodule "newsletter"]
 	path = newsletter
 	url = git@github.com:h-okay/newsletter-signup.git
+	branch = main
