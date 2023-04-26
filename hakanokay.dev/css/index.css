@@ -1,1 +1,160 @@
-p{font-size:1rem;margin:0 auto;line-height:1.5}h1{font-size:2.9rem;margin:0 auto;font-family:"Share Tech Mono",serif;font-weight:bold;color:#00ff41;letter-spacing:1px}h2{font-family:"Montserrat",serif;font-size:1.6rem;font-weight:bold;color:#047246eb;margin:0 auto}a{color:#00ff41}#title-bar{padding:50px 0}#contact{margin:0 auto 30px auto;width:50%}.pro{display:inline-block;text-decoration:underline;color:#34b582eb}.subheaders{font-family:"Montserrat",sans-serif;font-size:1.2rem;font-weight:bold;color:#2b986deb;margin:0 auto}.top-title{font-size:1.2rem;font-family:"Share Tech Mono",serif;font-weight:normal;color:#3fd69aeb;margin:0 auto;text-align:center}.typing-container{display:grid;place-items:center;margin:0 auto;width:265px}.typed{overflow:hidden;white-space:nowrap;border-right:5px solid;width:0;animation:typing 1s steps(40,end) forwards,blinking .7s infinite}.profile{margin:0 auto}.avatar-img{width:12%;height:auto;max-width:200px;min-width:150px;margin:50px auto;border-radius:50%}.profile-desc{margin:30px auto 0 auto;width:50%}.slide-in{animation:slide-in .5s cubic-bezier(.25,.46,.45,.94) both;animation-delay:1s}.left-img{float:left;margin-right:15px;margin-top:3%}.right-img{float:right;margin-top:3%}.info-row{width:50%;margin:0 auto 50px auto;text-align:left;line-height:1}.contact-desc{margin:15px auto;padding:0}.btn{font-family:"Montserrat",sans-serif;font-weight:bold;background-color:#11999e;color:#eaf6f6;border:none;padding:10px 10px;margin:35px 0 10px 0;letter-spacing:3px}.btn:hover{background-color:#03a062}@keyframes slide-in{0%{transform:translateX(-100px);opacity:0}100%{transform:translateX(0);opacity:1}}@keyframes typing{from{width:0}to{width:91%}}@keyframes blinking{0%{border-color:transparent}50%{border-color:#e0e0e0}100%{border-color:transparent}}@media screen and (max-width:750px){.left-img,.right-img{display:none}#contact,.profile-desc,.info-row{width:75%}.typed{font-size:2.3rem}.typing-container{width:215px}}
+p {
+  font-size: 1rem;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 2.9rem;
+  margin: 0 auto;
+  font-family: "Share Tech Mono", serif;
+  font-weight: bold;
+  color: #00ff41;
+  letter-spacing: 1px;
+}
+h2 {
+  font-family: "Montserrat", serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #047246eb;
+  margin: 0 auto;
+}
+a {
+  color: #00ff41;
+}
+#title-bar {
+  padding: 50px 0;
+}
+#contact {
+  margin: 0 auto 30px auto;
+  width: 50%;
+}
+.pro {
+  display: inline-block;
+  text-decoration: underline;
+  color: #34b582eb;
+}
+.subheaders {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2b986deb;
+  margin: 0 auto;
+}
+.top-title {
+  font-size: 1.2rem;
+  font-family: "Share Tech Mono", serif;
+  font-weight: normal;
+  color: #3fd69aeb;
+  margin: 0 auto;
+  text-align: center;
+}
+.typing-container {
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  width: 265px;
+}
+.typed {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 5px solid;
+  width: 0;
+  animation: typing 1s steps(40, end) forwards, blinking 0.7s infinite;
+}
+.profile {
+  margin: 0 auto;
+}
+.avatar-img {
+  width: 12%;
+  height: auto;
+  max-width: 200px;
+  min-width: 150px;
+  margin: 50px auto;
+  border-radius: 50%;
+}
+.profile-desc {
+  margin: 30px auto 0 auto;
+  width: 50%;
+}
+.slide-in {
+  animation: slide-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 1s;
+}
+.left-img {
+  float: left;
+  margin-right: 15px;
+  margin-top: 3%;
+}
+.right-img {
+  float: right;
+  margin-top: 3%;
+}
+.info-row {
+  width: 50%;
+  margin: 0 auto 50px auto;
+  text-align: left;
+  line-height: 1;
+}
+.contact-desc {
+  margin: 15px auto;
+  padding: 0;
+}
+.btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  background-color: #11999e;
+  color: #eaf6f6;
+  border: none;
+  padding: 10px 10px;
+  margin: 35px 0 10px 0;
+  letter-spacing: 3px;
+}
+.btn:hover {
+  background-color: #03a062;
+}
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 91%;
+  }
+}
+@keyframes blinking {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #e0e0e0;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+@media screen and (max-width: 750px) {
+  .left-img,
+  .right-img {
+    display: none;
+  }
+  #contact,
+  .profile-desc,
+  .info-row {
+    width: 75%;
+  }
+  .typed {
+    font-size: 2.3rem;
+  }
+  .typing-container {
+    width: 215px;
+  }
+}
