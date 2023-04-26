@@ -2,3 +2,7 @@
 	path = newsletter
 	url = git@github.com:h-okay/newsletter-signup.git
 	branch = main
+[submodule "hakanokay.dev"]
+	path = hakanokay.dev
+	url = git@github.com:h-okay/hakanokay.dev.git
+	branch = main
