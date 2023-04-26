@@ -6,3 +6,15 @@
 	path = hakanokay.dev
 	url = git@github.com:h-okay/hakanokay.dev.git
 	branch = main
+[submodule "tindock-mock"]
+	path = tindock-mock
+	url = git@github.com:h-okay/tindock-mock.git
+	branch = main
+[submodule "drum-kit"]
+	path = drum-kit
+	url = git@github.com:h-okay/drum-kit.git
+	branch = main
+[submodule "dice-for-me"]
+	path = dice-for-me
+	url = git@github.com:h-okay/dice-for-me.git
+	branch = main
