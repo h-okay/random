@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const rateLimit = require('express-rate-limit')
 
 const app = express()
-var limiter = rateLimit({
+const limiter = rateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
   max: 5
 })
