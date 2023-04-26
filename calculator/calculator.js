@@ -1,8 +1,17 @@
-const express = require("express");
-const bodyParser = require("body-parser");
+const express = require("express")
+const bodyParser = require("body-parser")
+const rateLimit = require('express-rate-limit')
+const app = express()
 
-const app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
+
+var limiter = rateLimit({
+    windowMs: 1 * 60 * 1000, // 1 minute
+    max: 5
+})
+
+app.use(limiter)
+app.use(bodyParser.urlencoded({ extended: true }))
+
 
 app.get("/", function (_, res) {
     res.sendFile(__dirname + "/index.html");
