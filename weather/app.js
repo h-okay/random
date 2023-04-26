@@ -1,17 +1,25 @@
 const express = require('express')
 const https = require('https')
 const bodyParser = require('body-parser')
+const rateLimit = require('express-rate-limit')
+
 const app = express()
+var limiter = rateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 5
+})
+app.use(limiter)
 app.use(bodyParser.urlencoded({ extended: true }))
 
-const appid = '' // api key
+const appid = process.env.appId // api key
 
 app.get('/', (_, res) => {
   res.sendFile(`${__dirname}/index.html`)
 })
 
 app.post('/', (req, res) => {
-  const locationUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${req.body.city}&appid=${appid}`
+  const city = req.body.city
+  const locationUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${appid}`
   https.get(locationUrl, (response) => {
     response.on('data', (data) => {
       const locationData = JSON.parse(data)
@@ -28,7 +36,7 @@ app.post('/', (req, res) => {
           res.write('<head><meta charset="utf-8"></head>')
           res.write(`<img src=${imgUrl}>`)
           res.write(
-            `<h1>${req.body.city} currently has ${desc} and the temperature is ${temp}</h1>`
+            `<h1>${city} currently has ${desc} and the temperature is ${temp}</h1>`
           )
           res.send()
         })
