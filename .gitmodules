@@ -18,3 +18,6 @@
 	path = dice-for-me
 	url = git@github.com:h-okay/dice-for-me.git
 	branch = main
+[submodule "todolist"]
+	path = todolist
+	url = git@github.com:h-okay/todolist.git
